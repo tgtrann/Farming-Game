@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://l1nflbl78d87"]
+
+[ext_resource type="Texture2D" uid="uid://d3k4n7y2beeui" path="res://assets/Objects/grass_biome_assets.png" id="1_2aixv"]
+[ext_resource type="PackedScene" uid="uid://cvbb46488xad6" path="res://scenes/components/collectable_component.tscn" id="2_qbesu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ypkdu"]
+atlas = ExtResource("1_2aixv")
+region = Rect2(80, 32, 16, 16)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s5rqd"]
+radius = 5.0
+
+[node name="Log" type="Sprite2D"]
+position = Vector2(0, -4)
+texture = SubResource("AtlasTexture_ypkdu")
+
+[node name="CollectableComponent" parent="." instance=ExtResource("2_qbesu")]
+y_sort_enabled = true
+collectable_name = "log"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectableComponent"]
+shape = SubResource("CircleShape2D_s5rqd")
+debug_color = Color(0.232664, 0.614853, 0.483184, 0.42)
