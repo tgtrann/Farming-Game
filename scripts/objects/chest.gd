@@ -19,9 +19,6 @@ var tomato_harvest_scene = preload("res://scenes/objects/tomato_harvest.tscn")
 var in_range: bool
 var is_chest_open: bool
 
-#TODO: prevent player from picking up crops while they are moving into chest
-#TODO: even after accepting the pasture box, moving disrupts the flow
-
 func _ready() -> void:
 	interactable_component.interactable_activated.connect(on_interactable_activated)
 	interactable_component.interactable_deactivated.connect(on_interactable_deactivated)

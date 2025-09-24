@@ -1,8 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://b18yk3bpaanxt"]
+[gd_scene load_steps=4 format=3 uid="uid://b18yk3bpaanxt"]
 
 [ext_resource type="Script" uid="uid://tnn22g6hdvdp" path="res://scripts/components/audio_play_time_component.gd" id="1_3pw5c"]
+[ext_resource type="PackedScene" uid="uid://c0fxvjhaa1o1n" path="res://scenes/components/interactable_component.tscn" id="2_0dqey"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_qlx5t"]
+radius = 219.659
 
 [node name="AudioPlayTimeComponent" type="Timer"]
 script = ExtResource("1_3pw5c")
+
+[node name="InteractableComponent" parent="." instance=ExtResource("2_0dqey")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
+shape = SubResource("CircleShape2D_qlx5t")
 
 [connection signal="timeout" from="." to="." method="_on_timeout"]

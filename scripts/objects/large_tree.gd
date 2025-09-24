@@ -1,8 +1,5 @@
 extends Sprite2D
 
-#TODO: log could get collected before it spawns on map
-#TODO: the tree shakes on the first frame of the chopping animation before you actually hit it
-
 @onready var hurt_component: HurtComponent = $HurtComponent
 @onready var damage_component: DamageComponent = $DamageComponent
 

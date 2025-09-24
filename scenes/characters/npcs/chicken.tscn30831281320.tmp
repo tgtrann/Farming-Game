@@ -68,7 +68,7 @@ animations = [{
 radius = 5.0
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_3ut1m"]
-radius = 785.255
+radius = 464.0
 
 [node name="Chicken" type="CharacterBody2D"]
 collision_layer = 64
@@ -88,7 +88,6 @@ shape = SubResource("CircleShape2D_khff7")
 [node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
 path_desired_distance = 10.0
 path_postprocessing = 1
-avoidance_enabled = true
 radius = 3.0
 debug_enabled = true
 
@@ -114,7 +113,8 @@ shape = SubResource("CircleShape2D_3ut1m")
 debug_color = Color(0, 0.641094, 0.339778, 0.42)
 
 [node name="ChickenCluckMultipleSFX" parent="." instance=ExtResource("7_51767")]
-max_distance = 700.0
+autoplay = true
+max_distance = 35.0
 
 [node name="AudioPlayTimeComponent" parent="." node_paths=PackedStringArray("audio_stream_player_2D") instance=ExtResource("8_3ut1m")]
 wait_time = 5.0

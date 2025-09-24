@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://grenctodkrsh"]
+[gd_scene load_steps=17 format=3 uid="uid://grenctodkrsh"]
 
 [ext_resource type="Script" uid="uid://oe2eak0yqv5s" path="res://scripts/characters/npcs/cow.gd" id="1_enmjj"]
 [ext_resource type="Texture2D" uid="uid://s56xycqkbpqs" path="res://assets/Characters/cow_sprites.png" id="1_gwury"]
@@ -7,6 +7,7 @@
 [ext_resource type="Script" uid="uid://b6mi0qh5opgjf" path="res://scripts/characters/npcs/walk_state.gd" id="4_50vd6"]
 [ext_resource type="PackedScene" uid="uid://fu8mfh74jwcc" path="res://scenes/audio/cow_moo_sfx.tscn" id="6_50vd6"]
 [ext_resource type="PackedScene" uid="uid://b18yk3bpaanxt" path="res://scenes/components/audio_play_time_component.tscn" id="7_qi6y6"]
+[ext_resource type="PackedScene" uid="uid://c0fxvjhaa1o1n" path="res://scenes/components/interactable_component.tscn" id="8_qi6y6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qi6y6"]
 atlas = ExtResource("1_gwury")
@@ -59,6 +60,9 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_0itdw"]
 radius = 7.07107
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_g4fec"]
+radius = 754.13
+
 [node name="Cow" type="CharacterBody2D"]
 collision_layer = 64
 script = ExtResource("1_enmjj")
@@ -96,8 +100,14 @@ animated_sprite_2d = NodePath("../../AnimatedSprite2D")
 navigation_agent_2d = NodePath("../../NavigationAgent2D")
 
 [node name="CowMooSFX" parent="." instance=ExtResource("6_50vd6")]
+max_distance = 700.0
 
 [node name="AudioPlayTimeComponent" parent="." node_paths=PackedStringArray("audio_stream_player_2D") instance=ExtResource("7_qi6y6")]
 wait_time = 12.0
 autostart = true
 audio_stream_player_2D = NodePath("../CowMooSFX")
+
+[node name="InteractableComponent" parent="." instance=ExtResource("8_qi6y6")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractableComponent"]
+shape = SubResource("CircleShape2D_g4fec")

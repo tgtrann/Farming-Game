@@ -28,6 +28,11 @@ func _process(delta : float) -> void:
 	if current_node_state:
 		current_node_state._on_process(delta)
 
+	for node in get_tree().get_nodes_in_group("AudioStreamPlayers"):
+		if node is AudioStreamPlayer:
+			if node.is_playing():
+				print(node.name, " is playing ", node.stream)
+
 
 func _physics_process(delta: float) -> void:
 	if current_node_state:
