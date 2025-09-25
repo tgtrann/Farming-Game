@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bi6q3lv0gdurf" path="res://scenes/components/mouse_cursor_component.tscn" id="5_43vid"]
 
 [node name="MainScene" type="Node2D"]
+y_sort_enabled = true
 
 [node name="MouseCursorComponent" parent="." instance=ExtResource("5_43vid")]
 cursor_component_texture = ExtResource("2_fiowe")
@@ -25,6 +26,7 @@ y_sort_enabled = true
 position = Vector2(0, 1)
 
 [node name="Player" parent="GameRoot" instance=ExtResource("3_q46b8")]
+z_index = 1
 position = Vector2(994, 222)
 
 [node name="Camera2D" type="Camera2D" parent="GameRoot/Player"]
