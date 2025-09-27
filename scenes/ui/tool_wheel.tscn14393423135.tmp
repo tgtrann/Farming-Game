@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4tnug4ov4ln0"]
+
+[ext_resource type="PackedScene" uid="uid://dsvo3m2spgxof" path="res://scenes/ui/selection_wheel.tscn" id="1_nnwvi"]
+[ext_resource type="Script" uid="uid://cpqbgpse6ecmv" path="res://scripts/ui/ui.gd" id="1_qgc6j"]
+
+[node name="Main" type="Node"]
+
+[node name="UI" type="CanvasLayer" parent="."]
+script = ExtResource("1_qgc6j")
+
+[node name="Label" type="Label" parent="UI"]
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Player equipped tool:"
+
+[node name="SelectionWheel" parent="." instance=ExtResource("1_nnwvi")]
+visible = false
+line_color = Color(0.851769, 0.851769, 0.851769, 1)
+hover_color = Color(0.325441, 0.325441, 0.325441, 1)

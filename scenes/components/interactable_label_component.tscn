@@ -27,5 +27,5 @@ offset_right = 18.0
 offset_bottom = 15.0
 theme_override_fonts/font = ExtResource("2_kjian")
 theme_override_font_sizes/font_size = 8
-text = "E"
+text = "F"
 horizontal_alignment = 1

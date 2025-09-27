@@ -272,6 +272,7 @@ InventoryItemPanel/styles/panel = SubResource("StyleBoxTexture_6c5ae")
 InventoryLabel/base_type = &"Label"
 InventoryLabel/font_sizes/font_size = 8
 InventoryLabel/fonts/font = ExtResource("2_mwd3c")
+Label/font_sizes/font_size = 18
 Label/fonts/font = ExtResource("2_nuqoc")
 MarginContainer/constants/margin_bottom = 10
 MarginContainer/constants/margin_left = 10

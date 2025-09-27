@@ -1,0 +1,82 @@
+[gd_scene load_steps=11 format=3 uid="uid://dsvo3m2spgxof"]
+
+[ext_resource type="Script" uid="uid://c0olq4hhxdb44" path="res://scripts/ui/selection_wheel.gd" id="1_5dcvy"]
+[ext_resource type="Script" uid="uid://c3n05bvwnmpb2" path="res://scenes/components/wheel_options.gd" id="2_5vouf"]
+[ext_resource type="Texture2D" uid="uid://d13pud2ot0jpu" path="res://assets/Objects/tools_and_materials.png" id="3_2npqt"]
+[ext_resource type="Texture2D" uid="uid://bthem8uojptae" path="res://assets/Objects/plant_assets.png" id="4_2npqt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2npqt"]
+atlas = ExtResource("3_2npqt")
+region = Rect2(-1, -16, 16, 16)
+script = ExtResource("2_5vouf")
+name = "None"
+metadata/_custom_type_script = "uid://c3n05bvwnmpb2"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u3j7b"]
+atlas = ExtResource("3_2npqt")
+region = Rect2(17, 0, 16, 16)
+script = ExtResource("2_5vouf")
+name = "Axe"
+metadata/_custom_type_script = "uid://c3n05bvwnmpb2"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ia5md"]
+atlas = ExtResource("3_2npqt")
+region = Rect2(33, 0, 16, 16)
+script = ExtResource("2_5vouf")
+name = "Tiller"
+metadata/_custom_type_script = "uid://c3n05bvwnmpb2"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fff2e"]
+atlas = ExtResource("3_2npqt")
+region = Rect2(0, 0, 16, 16)
+script = ExtResource("2_5vouf")
+name = "Watering Can"
+metadata/_custom_type_script = "uid://c3n05bvwnmpb2"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7i5b"]
+atlas = ExtResource("4_2npqt")
+region = Rect2(0, 0, 16, 16)
+script = ExtResource("2_5vouf")
+name = "Corn Seeds"
+metadata/_custom_type_script = "uid://c3n05bvwnmpb2"
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e1fsg"]
+atlas = ExtResource("4_2npqt")
+region = Rect2(1, 16, 16, 16)
+script = ExtResource("2_5vouf")
+name = "Tomato Seeds"
+metadata/_custom_type_script = "uid://c3n05bvwnmpb2"
+
+[node name="SelectionWheel" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5dcvy")
+bkg_color = Color(0.20871, 0.20871, 0.208711, 1)
+line_color = Color(0.851769, 0.851769, 0.851769, 1)
+hover_color = Color(0.325441, 0.325441, 0.325441, 1)
+outer_radius = 120
+inner_radius = 72
+line_width = 2
+options = Array[ExtResource("2_5vouf")]([SubResource("AtlasTexture_2npqt"), SubResource("AtlasTexture_u3j7b"), SubResource("AtlasTexture_ia5md"), SubResource("AtlasTexture_fff2e"), SubResource("AtlasTexture_k7i5b"), SubResource("AtlasTexture_e1fsg")])
+
+[node name="CenterLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -11.5
+offset_right = 20.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+horizontal_alignment = 1
+vertical_alignment = 1

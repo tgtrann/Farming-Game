@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bn2mn7sqwrk43"]
+[gd_scene load_steps=7 format=3 uid="uid://bn2mn7sqwrk43"]
 
 [ext_resource type="Theme" uid="uid://dta5cm14vmbon" path="res://themes/game_ui_theme.tres" id="1_e2vrk"]
 [ext_resource type="PackedScene" uid="uid://dfvjnjvltafw2" path="res://scenes/ui/emotes_panel.tscn" id="2_0kkfd"]
 [ext_resource type="PackedScene" uid="uid://biio5c47phmwc" path="res://scenes/ui/ToolsPanel.tscn" id="2_gusqm"]
 [ext_resource type="PackedScene" uid="uid://wyrmhh2ih7wt" path="res://scenes/ui/inventory_panel.tscn" id="3_gusqm"]
 [ext_resource type="PackedScene" uid="uid://ck2h8310svoih" path="res://scenes/ui/day_and_night_panel.tscn" id="4_gkbp4"]
+[ext_resource type="PackedScene" uid="uid://dsvo3m2spgxof" path="res://scenes/ui/selection_wheel.tscn" id="6_nwa5a"]
 
 [node name="GameScreen" type="CanvasLayer"]
 
@@ -39,3 +40,5 @@ size_flags_vertical = 8
 layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 0
+
+[node name="SelectionWheel" parent="." instance=ExtResource("6_nwa5a")]
